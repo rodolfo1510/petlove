@@ -10,6 +10,8 @@ class Index extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('petlove/index');
+		$this->load->view('petlove/head_petlove');
+		$this->load->view('petlove/detelles_petlove');
+		$this->load->view('petlove/footer_petlove');
 	}
 }
