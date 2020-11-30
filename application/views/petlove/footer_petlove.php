@@ -1,4 +1,4 @@
-  
+</main><!-- End #main -->
   <!-- ======= Footer ======= -->
     <div class="container d-md-flex py-4">
 

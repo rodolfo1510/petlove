@@ -3,85 +3,51 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <div class="col-lg-12 col-md-12 footer-newsletter">
+            <form action="<?php echo base_url(); ?>index.php/Gestion/buscar" method="post">
+                <table width="50%" style="float:left;">
+                  <td colspan="3">
+                      <input type="text" class="form-control" placeholder="Introduce el pin de tu mascota" id="buscar" name="buscar" pattern="[a-zA-Z0-9 ]{0,}">
+                  </td>
+                  <td></td>
+                  <td>
+                  <button type="submit">
+                     <span class="icofont-search"></span>
+                  </button>
+                  </td>
+                </table>
+            </form>
+          </div><br><br><br>
+          <p>..................................................................................</p>
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="<?php echo base_url(); ?>assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+        <?php if($mascotas) { ?>
+          <div class="row">
+            <?php foreach ($mascotas as $key => $mascota) {?>
+              <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <div class="member-img">
+                    <img src="<?php echo base_url(); ?>assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                      <a href="<?php echo base_url(); ?>index.php/Gestion/eliminar/<?php echo $mascota->id_mascota; ?>"><i class="icofont-delete"></i></a>
+                      <a href="<?php echo base_url(); ?>index.php/Gestion/actualizar/<?php echo $mascota->id_mascota; ?>"><i class="icofont-update"></i></a>
+                    </div>
+                  </div>
+                  <div class="member-info">
+                    <h4><?php echo $mascota->nom_mascota; ?></h4>
+                    <span><?php echo $mascota->des_mascota; ?></span>
+                  </div>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
+            <?php } ?>
+        <?php }else{ ?>
+          <div class="section-title">
+            <p>Deseas eliminar o modificar tu mascota!!!</p>
+            <p>Ingresa tu identificador de mascota</p>
+            <p>Que te fue dado al publicara</p>
+            <p>!!!</p>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="<?php echo base_url(); ?>assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="<?php echo base_url(); ?>assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="<?php echo base_url(); ?>assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
+          <?php } ?>
         </div>
-
+    
       </div>
     </section><!-- End Team Section -->

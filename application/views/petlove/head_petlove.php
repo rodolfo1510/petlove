@@ -52,29 +52,9 @@
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="active"><a href="#header">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#team">Team</a></li>
-              <li class="drop-down"><a href="">Drop Down</a>
-                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li class="drop-down"><a href="#">Deep Drop Down</a>
-                    <ul>
-                      <li><a href="">Deep Drop Down 1</a></li>
-                      <li><a href="">Deep Drop Down 2</a></li>
-                      <li><a href="">Deep Drop Down 3</a></li>
-                      <li><a href="">Deep Drop Down 4</a></li>
-                      <li><a href="">Deep Drop Down 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="">Drop Down 2</a></li>
-                  <li><a href="">Drop Down 3</a></li>
-                  <li><a href="">Drop Down 4</a></li>
-                </ul>
-              </li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="<?= $inicio ?>"><a href="<?= base_url();?>">Inicio</a></li>
+              <li class="<?= $gestion ?>"><a href="<?= base_url("index.php/Gestion/index");?>">Gestionar Mascota</a></li>
+              <li class="<?= $dar ?>><a href="#portfolio">Dar una mascota</a></li>
             </ul>
           </nav><!-- .nav-menu -->
 
@@ -85,24 +65,7 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
 
-    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="row">
-            <div class="col-xl-5">
-              <h1>Bettter digital experience with Presento</h1>
-              <h2>We are team of talanted designers making websites with Bootstrap</h2>
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
 
   <main id="main">
 
